@@ -169,7 +169,7 @@ def get_model(trunk='vgg19'):
             saved_for_loss = []
             out1 = self.model0(x)#46*46的特征图
             print(out1.shape)
-            out1=self.model0_tmp
+            out1=self.model0_tmp(out1)
             out1_1 = self.model1_1(out1) #PAF输出
             print(out1_1.shape)
             out1_2 = self.model1_2(out1) #关键点输出
