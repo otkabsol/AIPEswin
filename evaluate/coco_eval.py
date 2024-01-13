@@ -19,11 +19,11 @@ from my_lib.utils.common import Human, BodyPart, CocoPart, CocoColors, CocoPairs
 from my_lib.utils.paf_to_pose import paf_to_pose_cpp
 from my_lib.datasets import coco, transforms
 from my_lib.datasets import datasets
-
+import ipdb
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cfg', help='experiment configure file name',
-                    default='D:\【毕业论文】相关资料\【22 05 22】swin-pose代码\【swin_B】Realtime_Multi-Person_Pose_Estimation\Realtime_Multi-Person_Pose_Estimation\experiments\swin_384x384_sgd.yaml', type=str)
+                    default='./experiments/swin_384x384_sgd.yaml', type=str)
 parser.add_argument('--weight', type=str,
                     default='../ckpts/openpose.pth')
 parser.add_argument('opts',
@@ -265,6 +265,7 @@ def run_eval(image_dir, anno_file, vis_dir, model, preprocess):
     :param model: the model to test
     :returns: float, the reported mAP score
     """   
+    ipdb.set_trace()
     coco = COCO(anno_file)
     cat_ids = coco.getCatIds(catNms=['person'])    
     img_ids = coco.getImgIds(catIds=cat_ids)

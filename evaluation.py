@@ -14,7 +14,7 @@ with torch.autograd.no_grad():
     #weight_name = r'D:\【毕业论文】相关资料\【22 05 22】swin-pose代码\trained_model\model_0.pth'
     # weight_name = r'D:\【毕业论文】相关资料\【22 05 22】swin-pose代码\【swin_B】Realtime_Multi-Person_Pose_Estimation\Realtime_Multi-Person_Pose_Estimation\evaluate\best_pose.pth'
     #weight_name = '/mnt/AIPE-swinL/evaluate/best_pose.pth'
-    weight_name='mnt/AIPE-swinL/b.pth'
+    weight_name='/mnt/AIPE-swinL/b.pth'
     state_dict = torch.load(weight_name)
     print(state_dict)
     
@@ -36,8 +36,8 @@ with torch.autograd.no_grad():
     # this repo used 'vgg' preprocess
     preprocess = 'vgg'
     # run_eval(image_dir= '/home/hkl/project/My_Dataset/COCO2017/val2017', anno_file = '/home/hkl/project/My_Dataset/COCO2017/annotations/person_keypoints_val2017.json', vis_dir = '/home/hkl/project/My_Dataset/COCO2017/vis_val2017', model=model, preprocess=preprocess)
-    run_eval(image_dir=r'\mnt\coco2017\val2017',
-             anno_file=r'\mnt\coco2017\annotations\person_keypoints_val2017.json',
-             vis_dir=r'.\vis_model_0', model=model, preprocess=preprocess)
+    run_eval(image_dir=r'/mnt/coco2017/val2017',
+             anno_file=r'/mnt/coco2017/annotations/person_keypoints_val2017.json',
+             vis_dir=r'/mnt/AIPE-swinL/vis_model', model=model, preprocess=preprocess)
 
 # E:\swin-pose\Realtime_Multi-Person_Pose_Estimation\coco\val2017
